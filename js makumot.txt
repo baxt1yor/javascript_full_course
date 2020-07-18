@@ -1,0 +1,131 @@
+ascii encoding => simvollar
+factory function bu - ichidagi hossa va methodlari return qaytarigan functionga aytiladi va uni ishlatish uchun function nomi bn chaqiriladi
+conctructor functionlar esa - unda return bolmaydi uning hossa va methodlari "this" kalit sozi yordamida yaratilib unga qiymat olinadi bu function dinamic tarizda boladi dastur ishash jarayonida
+unga biror hossa va methodalar qoshib boladi ham uning hossa va ethodlari ochirib tahslash mumkin .
+functioni chaqirib ishaltish uchun {call}method orqali chaqish mumkin
+masalan :
+function myfunc(number)
+{
+this.number = number;
+}
+myfunc.call({}, 8);
+call methodiga 2 parametr beriladi 1-si bosh object boladi 2- qiymat esa uni ichida method yoki hossa qiymat vergul orqali ajratib berib yuboriladi
+myfunc.apply({}, [4]);
+apply methodi bunda ham 1-parametr bosh object 2-prametrla esa functioni hossa methodlar array soilinib berib yuboriladi
+
+malumotler saqlashda iiki hil boladi values type va refence type
+values {number, null, string, undefined, boolean}
+refence {object, function, array}
+
+object hossalari boylab yurish uhun for in loop yaxshiroq 
+for of loop bn aylanish uchun Obejct degan constructor functiondan fotdalanamiz 
+masalan {let my = {value: 5, color: rrr}; for (let key of Object.keys(my)) //for in uchun for (let key in my)
+Object.keys bu objectning hossa nomlarini qaytaradi
+Object.entries bu object hossalarini qiymatinin qaytaradi
+Object.assign bunda biror bosh object ga mavjud bolgan objectni qiymatini clonlab oladi.
+spret operatori bu clonlashning eng oddiy yoli masalan : // const obj_new = { ...my}; yani 3 nuqta korinishida beriladi.
+
+Math object haqida - Bu matematik amallarni bajarishda yoradam beradi uning bir qancha method
+va hossalari bor 
+{Math.random Math.tan Math.sin Matn.pow } bu hammasi hamma programming tillarda bor hossa va methodlar
+
+
+String object haqida - Bunda biz string type dagi malumotlarni saqlash mumkin eng kop ishlatiladigan hossa va method
+{let text  = 'Assalomu aleykum'; let obj_str = new String(); text.replace('aley', 'alay');//sozalrni alamshtradi
+    text.indexOf('Ass'); //sozni qaysi indexdan keyin kelishini aniqlash mumkin
+    text.toUpperCase(); berilgan sozni hamma harflarini katta harfga alamshtirib beradi
+    text.toLowercase(); //berilgan sozni kichik harflarga aylantirib  beradi
+    text.trim(); berilham string right and left tomondan ortiqcha probellardan tozalaydi
+    
+}
+push() array ni oxiriga element qoshadi yani arr.push(3);
+unshift() array ni boshidan qoshida
+splice bu method arrayni elementini ham ochirish ham qoshish uchun ham ishatiladi 
+arr.splice(id, delete_number, qiymat)
+includes() qaysi elementdan boshlab qarash va uni bor yoki qoqligini teshkiradi true yoki false qaytaradi
+
+agar bizga biror bir toplam elementlari musbat yoki manfiyligini aniqlas soralsa 
+every() methodi bizga yprdam beradi hamma elementi korib chiqiladi
+bu methoga callback function yoziladi true yoki false qaytaradi
+
+some()bu ham every methodga oxhab ketadi ln toplamning 1-elementi musbat bolsa true va dastur toxtaydi
+
+filter() toplamning faqat musbat elementlari yigib beradi  unga ham callback functioni
+ishlatiadi
+
+map()  methodi js da toplam hosil qilsih ili obj ni aylanish uchun ishlatiladi
+
+reduce() methodi berilgan toplamni yigindisini hisoblash uchun ishlatiladi unga ikki parametr kiradi 
+1-parametr yigindinin saqlab boruvchi va uning boshlangich qiymati bolishi kk 
+2- parametr toplam boylab yurish uchun kk
+
+function ni 2 xil elon qilsihimiz mumkin
+1- Function Declaration
+function deb elon qilinadi
+2 - Anontmoius Function Expression
+bunda biror ozgaruvci ochib  shunga qiymat sifatida function berib yuboriladi
+
+Hoisting jaroyini - elon qilinga functionlarni fainini yuqorisiga olib otish jarayonida
+
+arguments bu function berilgan arguments object qilib beradi 
+
+function argument oldiga 3 ta nuqta bn ishlatilsa rest parametrs deyiladi
+array parametr oldiga 3 tanuqta qoyilsa spret operatori deyiladi
+ 
+ JS get ter , set ter methodlariget methodi datani oqish uchun ishlatiladi
+ set methodi data kiritish uchun ishlatiladi
+
+
+ JS da try and catch xatolikni tehskirish uchun ishlatiladi umuman kop tillarda mavjud method
+ buni throw
+
+ let va var elon qilingan ozgaruvchilrning farqi 
+ let lokal ozgaruvhi bolsa u lokal joydan boshqa joyda chaqrilsa xatolik elon qilasi
+ bu JS ES6 dan boshlab qoshilgan 
+ var da esa aksincha lokal elon qilingan ozgaruvchi global bolib ishlayveradi
+
+
+ JS this bu biror objectga korsatkichi belgilaydi 
+ agar biror objectnning method ichidan this kaliti output qilinsa shu objectni
+ ozini hamma method va hossalarini ifodalaydi
+
+ agar this kaliti biror global function da output qilinsan dasturimiz node da run
+ qilinsa bu dastur global obectini method va hossalarini ifodalaydi
+ agar dastruimiz browserda run qilinsa window objectini hossa va methodlarini ifodalaydi
+
+
+
+JS Promise bu kelajakda sodir bolishi kutilyorgan hodisa
+
+Promise new kalit sozi bn biror ozgaruvhciga qiymat sifatida beriladi Promise ishlash jarayoni uchun uning ichiga callback
+function yoziladi bu function Promise ichida bolgani uchun
+unga execute function deb ataladi unga 2 ta qiymat berib yuboriladi
+responce va reject responce bu biz kutayotgan natijani ifodalaydi 
+reject esa biz kutayotgan natija biror xatolik tufayli ishlamasligi uchun unga error qiymat beriladi
+
+Promise ishlashi uchun than va catch va ular ichida callback function bn chaqiriladi 
+Promise ansinxorin tarizda ishlaydi 
+Js eval() function stringda kelgan matematik amallarni hisonblab beradi
+
+navigator sizning browseringiz haqida malumot olish imkonini beradi
+uning bir qancha methodlari  bor
+
+
+Js da class ichida public bolgan methodlar {constructor}=> yordamida beriladi 
+class ichida functionlar function kalit so'zi orqali yaratilmaydi oddiy nomi berilib ketiladi
+getter va setter methodlari ishlatiadi static funciton ham boladi
+meros olish extends 
+
+
+
+documetn.cookie Malumotlarni saqlash uchun ishlatiladi u server tomondaa ham ishlatiladi
+
+localStorage bunda malumot browserning keshida saqlanadi va doimiy user zlear qilmaguncha turadi
+
+sessionStorage esa qachon sayt qayta yuklansa oshnanda qoyiladi sayt yopilsa malumot o`chib ketadi
+
+cookie da memory bor belgilangan 4 kbayt xotiradan jot egallaydi
+
+
+
+proto biror objectning biror qiymatini olish uchun ishlatildi {__proto__}

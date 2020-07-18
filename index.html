@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculate</title>
+    <style>
+        .cal{
+            text-align: center;
+            margin-top: 10px;
+            background-color: #003400;
+            margin: 100px;
+        }
+        p{
+            width: 155px;
+            height: 50px;
+            text-align: right;
+            margin-left:470px;
+            margin-right: 500px;
+            margin-bottom: 5px;
+            font-size: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            border: 1px solid black;
+            background-color: beige;
+        }
+        button{
+            text-align: center;
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+            font-size: 20px;
+            color: black;
+            margin-bottom: 5px;
+            font-family:'Courier New', Courier, monospace;
+        }
+        #ochirish{
+         position: absolute;
+         right: 577px;
+         bottom:510px;
+
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="cal">
+        <p id="result">0</p>
+        <button onclick="clear()" id="ochirish">C</button> 
+        
+        <button onclick="myfunc(document.getElementById('7').innerHTML)" id="7">7</button>
+        <button onclick="myfunc(document.getElementById('8').innerHTML)" id="8">8</button>
+        <button onclick="myfunc(document.getElementById('9').innerHTML)" id="9">9</button>
+        <button onclick="myfunc(document.getElementById('kopaytma').innerHTML)" id="kopaytma">*</button>
+        <br/>
+        <button onclick="myfunc(document.getElementById('4').innerHTML)" id="4">4</button> 
+        <button onclick="myfunc(document.getElementById('5').innerHTML)" id="5">5</button> 
+        <button onclick="myfunc(document.getElementById('6').innerHTML)" id="6">6</button>
+        <button onclick="myfunc(document.getElementById('mnus').innerHTML)" id="mnus">-</button>
+        <br/>
+        <button onclick="myfunc(document.getElementById('1').innerHTML)" id="1">1</button>
+        <button onclick="myfunc(document.getElementById('2').innerHTML)" id="2">2</button>
+        <button onclick="myfunc(document.getElementById('3').innerHTML)" id="3">3</button>
+        <button onclick="myfunc(document.getElementById('plus').innerHTML)" id="plus">+</button>
+        <br/>
+        <button onclick="myfunc(document.getElementById('0').innerHTML)" id="0">0</button>
+        <button onclick="myfunc(document.getElementById('vergul').innerHTML)" id="vergul">,</button>
+        <button onclick="result()" id="teng">=</button> 
+        <button onclick="myfunc(document.getElementById('bolinma').innerHTML)" id="bolinma">/</button>
+        
+        <br/>
+            
+    </div>
+  
+</body>
+<script src="index.js"></script>
+</html>
